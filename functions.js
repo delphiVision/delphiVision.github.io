@@ -22,7 +22,7 @@ $( document ).ready(function() {
     function getMediaWikiReviews(wikiName) {
         var formName = wikiName;
         var xmlhttp = new XMLHttpRequest();
-        var url = "http://ec2-54-218-78-162.us-west-2.compute.amazonaws.com/mediaWikiRevisions?title=" + wikiName;
+        var url = "https://ec2-54-218-78-162.us-west-2.compute.amazonaws.com/mediaWikiRevisions?title=" + wikiName;
         // var url = "http://127.0.0.1:5000/mediaWikiRevisions?title=" + wikiName;
 
         xmlhttp.onreadystatechange = function () {
