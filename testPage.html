@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+</head>
+<body>
+    <input type="text" name="toolbox" id="helloworld">
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="jquery-3.1.0.js"></script>
+    <script>
+
+    $( document ).ready(function() {
+        $( "a" ).click(function( event ) {
+            alert( $("#helloworld").val() );
+            event.preventDefault();
+        });
+    });
+
+    </script>
+</body>
+</html>
