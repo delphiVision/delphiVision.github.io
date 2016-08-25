@@ -14,9 +14,6 @@ $( document ).ready(function() {
         },
         order: [[ 1, 'asc' ]]
     } );
-    $('#revisionAtIndex').click(function( event) {
-        alert(event.currentTarget.value)
-    })
     });
     var contentArray = []
     function getMediaWikiReviews(wikiName) {
@@ -40,15 +37,25 @@ $( document ).ready(function() {
         $('#id01').append("<tr> <th><input type=checkbox id=selectall/></th> <th>Revision Date</th> <th>Revision Comment</th> <th>View Revision</th> </tr>")
     for (i = 0; i < arr.revisions.length; i++) {
         var content = arr.revisions[i]['*']
+        var newFilteredString = content.replace(/['"{}]|<\/?blockquote>/g, '')
+        // var filteredContentOne = content.split("{").join(" ")
+        // var filteredContentTwo = filteredContentOne.split("}").join(" ")
+
         contentArray.push(content)
         var timestamp = arr.revisions[i].timestamp
         var comment = arr.revisions[i]['comment']
         var beautified = new Date('2015-10-16T19:50:53Z')
-        $('#id01').append("<tr> <td align=center><input type=checkbox class=case name=case value=" + i + "/></td> <td>" + timestamp + "</td> <td>" + comment +  "</td> <td> <button id=revisionAtIndex value=" + i + ">View Revision</button></td> </tr>");
+        $('#id01').append("<tr> <td align=center><input type=checkbox class=case name=case value=" + i + "/></td> <td>" + timestamp + "</td> <td>" + comment +  "</td> <td> <button id=revisionAtIndex value=" + i + " onclick=alert("+ newFilteredString + ")>View Revision</button></td> </tr>");
 
         // longstring += timestamp + "<br>" + "<br>" + content + "<br>" + "<br>";
     }
         $("#id01").addClass('wellBehavedContainer')
+        // document.getElementById("revisionAtIndex").addEventListener("click", function(event){
+        //   alert(event.currentTarget.value)
+        // });
+        // $('#revisionAtIndex').click(function( event) {
+        //     alert(event.currentTarget.value)
+        // })
 
     // document.getElementById("id01").innerHTML = longstring;
 }
