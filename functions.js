@@ -45,7 +45,32 @@ $( document ).ready(function() {
         var timestamp = arr.revisions[i].timestamp
         var comment = arr.revisions[i]['comment']
         var beautified = new Date('2015-10-16T19:50:53Z')
-        $('#id01').append("<tr> <td align=center><input type=checkbox class=case name=case value=" + i + "/></td> <td>" + timestamp + "</td> <td>" + comment +  "</td> <td> <button id=revisionAtIndex value=" + i + " onclick=alert("+ newFilteredString + ")>View Revision</button></td> </tr>");
+        
+var newCommitThingy = $(`
+      <tr>
+           <td align=center>
+               <input type=checkbox class=case name=case/>
+           </td>
+           <td></td>
+           <td></td>
+           <td>
+               <button id=revisionAtIndex>
+                   View Revision
+               </button>
+           </td>
+      </tr>
+`);
+
+newCommitThingy[0].querySelector('td input').value = i;
+newCommitThingy[0].querySelectorAll('td')[1].innerText = timestamp;
+newCommitThingy[0].querySelectorAll('td')[2].innerText = comment;
+var buttonThingy = newCommitThingy[0].querySelector('td button');
+buttonThingy.value = i;
+buttonThingy.onclick = function(){alert(newFilteredString)};
+
+$('#id01').append(newCommitThingy)
+
+        // $('#id01').append("<tr> <td align=center><input type=checkbox class=case name=case value=" + i + "/></td> <td>" + timestamp + "</td> <td>" + comment +  "</td> <td> <button id=revisionAtIndex value=" + i + " onclick=alert("+ newFilteredString + ")>View Revision</button></td> </tr>");
 
         // longstring += timestamp + "<br>" + "<br>" + content + "<br>" + "<br>";
     }
