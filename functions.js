@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     $( "#findRevs" ).click(function( event ) {
-            getMediaWikiReviews($('#wikiTitle').val())
+            getMediaWikiReviews($('#wikiTitle').val(), $('#wikiBase').val())
         });
     $('#example').DataTable( {
         columnDefs: [ {
@@ -16,12 +16,12 @@ $( document ).ready(function() {
     } );
     });
     var contentArray = []
-    function getMediaWikiReviews(wikiName) {
+    function getMediaWikiReviews(wikiName, wikiBase) {
         var formName = wikiName;
         var xmlhttp = new XMLHttpRequest();
-        var url = "http://ec2-54-218-78-162.us-west-2.compute.amazonaws.com/mediaWikiRevisions?title=" + wikiName;
-        // var url = "http://127.0.0.1:5000/mediaWikiRevisions?title=" + wikiName;
-
+        var url = "http://ec2-54-218-78-162.us-west-2.compute.amazonaws.com/mediaWikiRevisions?title=" + wikiName + "&base=" + wikiBase;
+        // var url = "http://127.0.0.1:5000/mediaWikiRevisions?title=" + wikiName + "&base=" + wikiBase;
+// http://127.0.0.1:5000/
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 parseResponse(xmlhttp.responseText)
@@ -45,7 +45,7 @@ $( document ).ready(function() {
         var timestamp = arr.revisions[i].timestamp
         var comment = arr.revisions[i]['comment']
         var beautified = new Date('2015-10-16T19:50:53Z')
-        
+
 var newCommitThingy = $(`
       <tr>
            <td align=center>
