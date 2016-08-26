@@ -31,6 +31,20 @@ $( document ).ready(function() {
         xmlhttp.send();
         return false
     }
+    function closePopup() {
+      var popup = document.getElementById('myPopup');
+      if (popup.classList.toggle('show') == true) {
+        popup.classList.toggle('show');
+      }
+    }
+    function activatePopup(content) {
+        var popup = document.getElementById('myPopup');
+        popup.textContent = content
+        if (popup.classList.toggle('show') == false) {
+          popup.classList.toggle('show');
+        }
+
+    }
     function parseResponse(response) {
     var longstring = ""
     var arr = JSON.parse(response);
@@ -66,7 +80,7 @@ newCommitThingy[0].querySelectorAll('td')[1].innerText = timestamp;
 newCommitThingy[0].querySelectorAll('td')[2].innerText = comment;
 var buttonThingy = newCommitThingy[0].querySelector('td button');
 buttonThingy.value = i;
-buttonThingy.onclick = function(){alert(newFilteredString)};
+buttonThingy.onclick = function(){activatePopup(content)};
 
 $('#id01').append(newCommitThingy)
 
@@ -74,6 +88,7 @@ $('#id01').append(newCommitThingy)
 
         // longstring += timestamp + "<br>" + "<br>" + content + "<br>" + "<br>";
     }
+
         $("#id01").addClass('wellBehavedContainer')
         // document.getElementById("revisionAtIndex").addEventListener("click", function(event){
         //   alert(event.currentTarget.value)

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style>
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+</style>
+<body style="text-align:center">
+
+<h2>Popup</h2>
+
+<div class="popup" onclick="myFunction()">Click me to toggle the popup!
+  <span class="popuptext" id="myPopup">A Simple Popup! Actually it's quite complicated. Why is aws so weird.afsdlas;ldfjlsakdj flkasjdf lkasjflk jsfl;kj saldfkj as;lkfj ;alsdkfj skfjhlask jf lkasjhdf lkjashf kljsahf lkjs aldkfjhaslkdjfhl aksdjfh klasjfh laksjdhflkjsd</span>
+</div>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById('myPopup');
+    popup.textContent = "Hello World"
+    popup.classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
