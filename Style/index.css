@@ -41,17 +41,8 @@ body{
 	padding: 0;
 }
 
-/*body.home{
-	/*margin: 0px;*/
-	background-image: url("../Images/LandingPhoto.png");
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	background-size: cover;
-}*/
-
 /* Navigation */
-.navigation {
+#navigation {
 	width: 100%;
 	height: 70px;
 	position: fixed;
