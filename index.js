@@ -19,7 +19,7 @@ function authenticateUser(email, password) {
             $('#incorrectPassword').text("Incorrect Password");
           } else {
             $('#incorrectPassword').text("Authenticated");
-          }
+            window.location.replace("mwikitest.html");          }
       }
   }
   xmlhttp.open("POST", serverURL);
