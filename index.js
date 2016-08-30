@@ -16,9 +16,9 @@ function authenticateUser(email, password) {
   xmlhttp.onreadystatechange = function () {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
           if (xmlhttp.responseText == "False") {
-            $('#incorrectPassword').innerText = "Incorrect Password";
+            $('#incorrectPassword').text("Incorrect Password");
           } else {
-            $('#incorrectPassword').innerText = "Authenticated";
+            $('#incorrectPassword').text("Authenticated");
           }
       }
   }
