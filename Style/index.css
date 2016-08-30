@@ -39,6 +39,7 @@
 body{
 	margin: 0;
 	padding: 0;
+  font-family: "Myriad Pro";
 }
 
 /* Navigation */
@@ -68,7 +69,7 @@ body{
 	letter-spacing: 2px;
 }
 
-#login{
+/*#login{
 	display: inline-block;
 	line-height: 55px;
 	float: right;
@@ -78,7 +79,7 @@ body{
 	font-weight: bold;
 	font-size: 12px;
 	letter-spacing: 2px;
-}
+}*/
 
 #radio{
 	display: inline-block;
@@ -159,15 +160,19 @@ body{
   filter: blur(5px);
   height: 100%;
 }
+#loginBox{
+  position:relative;
+  text-align: center;
+  top: 150px;
+  z-index: 100;
+}
 #titleText{
 	position: relative;
 	text-align: center;
 	/*width: 100%;*/
-	top: 150px;
 	font-family: 'Myriad Pro';
   font-size: 50px;
   color: white;
-  z-index: 100;
 }
 
 #hook{
@@ -189,7 +194,6 @@ body{
 	height: 24px;
 	width: 250px;
 	background-color: white;
-	font-family: "Open Sans";
 	font-size: 14px;
 	padding-left: 10px;
 	border-radius: 2px;
@@ -207,6 +211,57 @@ body{
 	color: white;
 	font-size: 14px;
 	border-radius: 2px;
+}
+
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  margin-top: 5%;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
 }
 
 /* Body End */
