@@ -174,7 +174,11 @@ body{
   font-size: 50px;
   color: white;
 }
-
+.badPasswordStyling {
+  background-color: #b92828;
+  color: white;
+  padding: 4px;
+}
 #hook{
 	font-weight: bold;
 	font-size: 35px;
@@ -217,10 +221,12 @@ select {
 background-color: #f2f2f2;
 color: #b1b1b1;
 padding: 20px;
-margin: 10px;
 font-size: 16px;
 cursor: pointer;
 border: none;
+height: 30px;
+margin-top: 0px;
+margin-bottom: 15px;
 }
 
 .form {
