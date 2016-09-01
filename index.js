@@ -20,7 +20,9 @@ function authenticateUser(email, password) {
             $("#incorrectPassword").addClass('badPasswordStyling')
           } else {
             $('#incorrectPassword').text("Authenticated");
-            window.location.replace("mwikitest.html");          }
+            sessionStorage.setItem("companyID", xmlhttp.responseText)
+            window.location.replace("companyDashboard.html");
+                 }
       }
   }
   xmlhttp.open("POST", serverURL);
