@@ -4,6 +4,7 @@ $('.message a').click(function(){
 });
 $('#login').click(function() {
   authenticateUser($('#email').val(), $('#password').val())
+  //TODO MAKE A SWITCH STATEMENT AND DIFFERENT AUTH FUNCTIONS FOR PATENT WRITERS COMPANIES AND Employees
 })
 });
 
@@ -21,7 +22,19 @@ function authenticateUser(email, password) {
           } else {
             $('#incorrectPassword').text("Authenticated");
             sessionStorage.setItem("companyID", xmlhttp.responseText)
-            window.location.replace("companyDashboard.html");
+            switch($('#acctTypeSelecter').val()) {
+              case 'employee':
+                  window.location.href = "mwikitest.html";
+                  break;
+              case 'company':
+                  window.location.href = "companyDashboard.html";
+                  break;
+              case 'patentWriter':
+                  window.location.href = "patentWriterDashboard.html";
+                  break;
+              default:
+                  alert("Selector not working");
+              }
                  }
       }
   }
