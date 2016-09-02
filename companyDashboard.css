@@ -10,7 +10,9 @@ th, td {
     padding: 4px;
     border: 3px solid #ccc;
 }
-
+body {
+  font-family: 'Myriad Pro';
+}
 
 #radio{
 	display: inline-block;
@@ -36,7 +38,7 @@ th, td {
 
 #bodyContainerLeft {
   float: left;
-  margin-left: 24%;
+  margin-left: 10%;
   margin-right: 50px;
   /*position: relative;*/
   /*margin-top: 10%;*/
@@ -45,6 +47,14 @@ th, td {
 }
 #bodyContainerRight {
   float: left;
+  /*position: relative;*/
+  /*margin-top: 10%;*/
+  /*text-align: center;*/
+  /*margin-left: 40%;*/
+}
+#bodyContainerCenter {
+  float: left;
+  margin-right: 50px;
   /*position: relative;*/
   /*margin-top: 10%;*/
   /*text-align: center;*/

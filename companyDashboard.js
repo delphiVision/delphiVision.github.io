@@ -3,6 +3,12 @@ $( document ).ready(function() {
      * that includes headers. */
     var companyID = sessionStorage.getItem("companyID")
     getCompanyName(companyID)
+    //populate employee table
+
+
+    //populate project table
+
+
     var rows = $('tr').not(':first');
     /* Create 'click' event handler for rows */
     rows.on('click', function(e) {
@@ -12,7 +18,37 @@ $( document ).ready(function() {
             rows.removeClass('highlight');
             row.addClass('highlight');
     });
+
+
 });
+function populateEmployeeTable() {
+    var tableHeader = $(`
+        <tr>
+            <th>Employee Name</th>
+            <th>Employee Email</th>
+        </tr>`)
+    $('#employeeTable').append(tableHeader)
+    
+}
+function populateProjectTable() {
+  var tableHeader = $(`
+      <tr>
+          <th>Project Name</th>
+          <th>Project URL</th>
+      </tr>`)
+  $('#projectTable').append(tableHeader)
+
+}
+function populatePatentWriterTable() {
+  var tableHeader = $(`
+      <tr>
+          <th>Patent Writer Name</th>
+          <th>Patent Writer Email</th>
+          <th>Project</th>
+      </tr>`)
+  $('#projectTable').append(tableHeader)
+
+}
 function getCompanyName(id) {
   var serverURL = "http://ec2-54-218-78-162.us-west-2.compute.amazonaws.com/getCompanyName"
   var formData = new FormData();
