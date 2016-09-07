@@ -9,7 +9,19 @@ $('#login').click(function() {
 });
 
 function authenticateUser(email, password) {
-  var serverURL = "http://ec2-54-218-78-162.us-west-2.compute.amazonaws.com/authenticateCompany"
+  switch($('#acctTypeSelecter').val()) {
+    case 'employee':
+        var serverURL = "http://ec2-54-218-78-162.us-west-2.compute.amazonaws.com/authenticateEmployee"
+        break;
+    case 'company':
+        var serverURL = "http://ec2-54-218-78-162.us-west-2.compute.amazonaws.com/authenticateCompany"
+        break;
+    case 'patentWriter':
+        var serverURL = "http://ec2-54-218-78-162.us-west-2.compute.amazonaws.com/authenticatePatentWriter"
+        break;
+    default:
+        alert("Selector not working");
+    }
   var formData = new FormData();
   var xmlhttp = new XMLHttpRequest();
   formData.append("email", email);
@@ -21,12 +33,16 @@ function authenticateUser(email, password) {
             $("#incorrectPassword").addClass('badPasswordStyling')
           } else {
             $('#incorrectPassword').text("Authenticated");
-            sessionStorage.setItem("companyID", xmlhttp.responseText)
             switch($('#acctTypeSelecter').val()) {
               case 'employee':
-                  window.location.href = "mwikitest.html";
+                  var employeeDict = JSON.parse(xmlhttp.responseText)
+                  // for ((key, value) in employeeDict) {
+                  //   sessionStorage.setItem(key, value)
+                  // }
+                  window.location.href = "employeeDashboard.html";
                   break;
               case 'company':
+                  sessionStorage.setItem("companyID", xmlhttp.responseText)
                   window.location.href = "companyDashboard.html";
                   break;
               case 'patentWriter':
