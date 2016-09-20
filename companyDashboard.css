@@ -34,6 +34,7 @@ body {
 }
 #bodyContainerCenter {
   float: left;
+  margin-left: 20%;
   margin-right: 50px;
   /*position: relative;*/
   /*margin-top: 10%;*/

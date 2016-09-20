@@ -125,7 +125,7 @@ a{
 	font-family: 'Open Sans';
 	font-size: 14px;
 	position: absolute;
-	margin-top: 200px;
+	margin-top: 130px;
   width: 100%;
 }
 
@@ -199,13 +199,25 @@ a{
 }
 .containerBlob {
   display: inline-block;
-  width: 40%;
+  width: 45%;
   /*height: 90px;*/
   float: left;
   text-align: justify;
   /*margin-right: 25px;*/
   background-color: rgba(65, 150, 228, 0.16);
-  margin: 30px;
+  margin: 20px;
+  padding: 10px;
+  vertical-align: top;
+}
+.wideContainerBlob {
+  display: inline-block;
+  width: 95%;
+  /*height: 90px;*/
+  float: left;
+  text-align: justify;
+  /*margin-right: 25px;*/
+  background-color: rgba(65, 150, 228, 0.16);
+  margin: 20px;
   padding: 10px;
   vertical-align: top;
 }
@@ -339,3 +351,62 @@ a{
 	cursor: pointer;
 }
 /* Body End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+  -webkit-transform: rotate(-45deg);
+  font-size: 55px;
+  color: #5e6063;
+}
+#logo {
+    display: inline-block;
+    position: relative;
+}
+#logo .speedometer {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 20px solid #5fdc61;
+    border-right: 20px solid white;
+    border-bottom: 20px solid white;
+    -webkit-transform: rotate(45deg);
+    display: inline-block;
+}
+#logo .needle {
+    width: 5px;
+    height: 100px;
+    background: #999999;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    display: inline-block;
+    left: 120px;
+    position: absolute;
+    top: 15px;
+    -webkit-animation:move 2s;
+     transform:rotate(80deg);
+    transform-origin:bottom;
+}
+@-webkit-keyframes move {
+     0% {
+        transform:rotate(-90deg);
+    }
+/* 50% {
+        transform:rotate(90deg);
+    } */
+/*     100% {
+        transform:rotate(-90deg);
+    } */
+}
