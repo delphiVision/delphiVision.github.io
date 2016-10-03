@@ -1,0 +1,61 @@
+.wellBehavedContainer {
+  display: inline-block;
+  width: auto;
+  /*height: 90px;*/
+  float: left;
+  text-align: justify;
+  /*margin-right: 25px;*/
+  background-color: rgba(65, 150, 228, 0.16);
+  margin: 5px;
+  padding: 10px;
+  vertical-align: top;
+}
+body {
+  font-family: "Myriad Pro", Helvetica;
+}
+#QueryActions {
+  float: right;
+}
+table {
+	width: 300px;
+	border: 1px solid;
+	border-collapse:collapse;
+	margin: 0 0 0 20px;
+}
+th {
+	background-color:#3E6DB0;
+	color: white;
+	padding: 5px;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popuptext {
+    visibility: hidden;
+    /*width: 160px;*/
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}

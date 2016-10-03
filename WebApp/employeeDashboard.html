@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel = "stylesheet" type = "text/css" href = "navigationBar.css">
+  <link rel = "stylesheet" type = "text/css" href = "employeeDashboard.css">
+<script src="jquery-3.1.0.js"></script>
+<script src="employeeDashboard.js"></script>
+  <div id = "navigationBarMain">
+    <a href = "dashboard.html"><div id = "navigationBarMainTitle"><img id = "navigationBarMainLogo" src = "Images/delphiLogo.png"></div></a>
+    <!-- <a href = "dashboard.html" ><div id = "signup">SIGNUP</div></a>
+    <a href = "dashboard.html" ><div id = "signup" style="margin-right: 15px">LOG IN</div></a>
+    <a href = "dashboard.html" ><div id = "radio">Team</div></a>
+    <a href = "dashboard.html" ><div id = "radio">Demo</div></a> -->
+    <div id = "radio"></div>
+  </div>
+</head>
+<body>
+  <div id="MediaWikiForm">
+<h1>Connect Your Product's Wiki!</h1>
+<h3> Enter Base URL in format: https://www.mediawiki.org </h3>
+<input type="text" name="wikiBase" id="wikiBase">
+<h3> Enter Wiki Title <h3>
+<input type="text" name="wikiTitle" id="wikiTitle">
+<button id="findRevs">Continue</button>
+<div class="popup" onclick="closePopup()">
+  <span class="popuptext" id="myPopup"></span>
+</div>
+</div>
+<div id="QueryActions">
+  <button id="ShowRevs">Show Revisions</button>
+  <button id="AddRevs"> Add Revisions</button>
+</div>
+<!--<form name="mediaWikiForm"  action=""-->
+<!--onsubmit="getMediaWikiReviews()" method="post">-->
+<!--Title: <input type="text" name="title">-->
+<!--<input type="submit" value="Submit">-->
+<!--</form>-->
+<div class="revPickerContainer">
+<table id="id01" border="1">
+
+</table>
+
+</div>
+
+
+</body>
+</html>
