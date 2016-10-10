@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Mini Ajax File Upload Form</title>
+
+		<!-- Google web fonts -->
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+
+		<!-- The main CSS file -->
+		<link href="assets/css/style.css" rel="stylesheet" />
+		<link rel = "stylesheet" type = "text/css" href = "webapp/navigationBar.css">
+
+		<div id = "navigationBarMain">
+	    <a href = "dashboard.html"><div id = "navigationBarMainTitle"><img id = "navigationBarMainLogo" src = "Images/delphiLogo.png"></div></a>
+	    <!-- <a href = "dashboard.html" ><div id = "signup">SIGNUP</div></a>
+	    <a href = "dashboard.html" ><div id = "signup" style="margin-right: 15px">LOG IN</div></a>
+	    <a href = "dashboard.html" ><div id = "radio">Team</div></a>
+	    <a href = "dashboard.html" ><div id = "radio">Demo</div></a> -->
+	    <div id = "radio"></div>
+	  </div>
+	</head>
+
+	<body>
+		<h2 style="margin-top: 30px;">Documentation Portal</h2>
+		<form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+			<div id="drop">
+<svg class="box__icon" xmlns="http://www.w3.org/2000/svg" width="50%" height="50%" viewBox="0 0 50 43"><path d="M48.4 26.5c-.9 0-1.7.7-1.7 1.7v11.6h-43.3v-11.6c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v13.2c0 .9.7 1.7 1.7 1.7h46.7c.9 0 1.7-.7 1.7-1.7v-13.2c0-1-.7-1.7-1.7-1.7zm-24.5 6.1c.3.3.8.5 1.2.5.4 0 .9-.2 1.2-.5l10-11.6c.7-.7.7-1.7 0-2.4s-1.7-.7-2.4 0l-7.1 8.3v-25.3c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v25.3l-7.1-8.3c-.7-.7-1.7-.7-2.4 0s-.7 1.7 0 2.4l10 11.6z"></path></svg>
+				<a>Click To Add Files</a>
+				<input type="file" name="upl" multiple />
+			</div>
+
+			<ul>
+				<!-- The file uploads will be shown here -->
+			</ul>
+
+		</form>
+		<form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+			<!-- <div id="drop">
+				Drop Here
+
+				<a>Download Confluence Plug In</a>
+				<input type="text" name="upl" multiple />
+			</div> -->
+
+			<!-- <ul>
+			</ul> -->
+			<!-- <div class='login'> -->
+			  <h2>Other Sources</h2>
+			  <input name='username' value='mediawiki.org/photovolaticwirelesscharging' type='text'>
+				<input class='animated' type='notsubmit' value='Add'>
+				<input class='animated' type='submit' value='Download Confluence Plugin'>
+			  <!-- <a class='forgot' href='#'>Already have an account?</a> -->
+			<!-- </div> -->
+		</form>
+
+		<footer>
+            <h2><i>Delphi Vision:</i> Upload all related files</h2>
+            <div id="tzine-actions">
+
+	            <a id="tzine-download" href="inventionDisclosure.html" title="Download This Example!">Continue</a>
+            </div>
+        </footer>
+
+		<!-- JavaScript Includes -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="assets/js/jquery.knob.js"></script>
+
+		<!-- jQuery File Upload Dependencies -->
+		<script src="assets/js/jquery.ui.widget.js"></script>
+		<script src="assets/js/jquery.iframe-transport.js"></script>
+		<script src="assets/js/jquery.fileupload.js"></script>
+
+		<!-- Our main JS file -->
+		<script src="assets/js/script.js"></script>
+
+	</body>
+</html>

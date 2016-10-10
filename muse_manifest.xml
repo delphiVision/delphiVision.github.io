@@ -1,0 +1,38 @@
+<manifest alg="2" build="2015.2.1.352" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="InventionDisclosure.com" resolutions="1x" timestamp="1476089630670">
+  <folder name="css">
+    <file name="site_global.css" crc="3916556066"/>
+    <file name="index.css" crc="160966773" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="169078940" ref="index"/>
+    <file name="museutils.js" crc="3851988764" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="169177150" ref="index"/>
+    <file name="jquery.watch.js" crc="3842844514" ref="index"/>
+    <file name="require.js" crc="4108833657" ref="index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="271560940" ref="index"/>
+    <file name="webpro.js" crc="4067903014" ref="index"/>
+    <file name="form_check.php" crc="121412709" ref="index"/>
+    <file name="form_throttle.php" crc="4268640971" ref="index"/>
+    <file name="form_process.php" crc="444429785" ref="index"/>
+    <file name="form-u175.php" crc="321161857" ref="index"/>
+    <file name="pie.js" crc="3831537696" ref="index"/>
+    <file name="musewpslideshow.js" crc="4265225696" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="4075157096" ref="index"/>
+    <file name="touchswipe.js" crc="474750357" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="delphi.png" crc="4198886954" seo="true" ref="index"/>
+    <file name="u196-17.png" crc="87887611" ref="index"/>
+    <file name="u196-17-r.png" crc="3915634285" ref="index"/>
+    <file name="u196-17-m.png" crc="330180788" ref="index"/>
+    <file name="u196-17-fs.png" crc="3905573061" ref="index"/>
+    <file name="checkboxunchecked.jpg" crc="3995141794" ref="index"/>
+    <file name="checkboxuncheckedrollover.jpg" crc="4064281604" ref="index"/>
+    <file name="checkboxuncheckedmousedown.jpg" crc="187163638" ref="index"/>
+    <file name="checkboxchecked.jpg" crc="278809147" ref="index"/>
+    <file name="checkboxcheckedrollover.jpg" crc="9876373" ref="index"/>
+    <file name="checkboxcheckedmousedown.jpg" crc="4102437312" ref="index"/>
+  </folder>
+  <file name="index.html" crc="64494121" seo="true" mt="1476089605363" redirect="true"/>
+</manifest>
